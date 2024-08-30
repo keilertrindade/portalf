@@ -15,7 +15,7 @@ async function sendContactForm(event) {
     //alert();
     console.log(formData);
 
-    const endpoint = 'http://portalf-webapi.runasp.net/fale-conosco';
+    const endpoint = 'http://portalf-webapi.runasp.net/fale-conosco/';
 
     try {
         // Envia os dados para a API usando POST
@@ -38,7 +38,7 @@ async function sendContactForm(event) {
 function testGetRequest() {
     //event.preventDefault();
     // URL do seu endpoint
-    var url = "http://portalf-webapi.runasp.net/fale-conosco/ObterTodos"; // Substitua pela URL correta
+    var url = "http://portalf-webapi.runasp.net/fale-conosco/ObterTodos/"; // Substitua pela URL correta
 
     //Fazendo a requisição GET usando axios
     axios.get(url)
@@ -59,7 +59,7 @@ async function registerMailToNewsletter(event){
 
     // Captura os dados do formulário
     
-    const endpoint = 'http://portalf-webapi.runasp.net/newsletter';
+    const endpoint = 'http://portalf-webapi.runasp.net/newsletter/';
 
     const formData = {
         Mail: document.getElementById('mailNewsletter').value
@@ -91,7 +91,7 @@ async function registerMailToNewsletterBlock(event){
 
     // Captura os dados do formulário
     
-    const endpoint = 'http://portalf-webapi.runasp.net/newsletter';
+    const endpoint = 'http://portalf-webapi.runasp.net/newsletter/';
 
     const formData = {
         Mail: document.getElementById('mailNewsletterBlock').value
