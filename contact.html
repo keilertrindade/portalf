@@ -13,7 +13,7 @@
         <title>Portal F | O seu futuro é agora</title>
 		
 		<!-- Favicon -->
-        <link rel="icon" href="img/favicon222.png"> 
+        <link rel="icon" href="img/portalf_.jpg"> 
 		
 		<!-- Google Fonts -->
 		<link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
@@ -98,7 +98,7 @@
 							<div class="col-lg-3 col-md-3 col-12">
 								<!-- Start Logo -->
 								<div class="logo">
-									<a href="index.html"><img src="img/logoportalf.png" alt="#"></a>
+									<a href="index.html"><img src="img/logoportalf1.png" alt="#"></a>
 								</div>
 								<!-- End Logo -->
 								<!-- Mobile Nav -->
@@ -110,10 +110,10 @@
 								<div class="main-menu">
 									<nav class="navigation">
 										<ul class="nav menu">
-											<li class="active"><a href="#">Home <i class="icofont-rounded-down"></i></a>
-												<ul class="dropdown">
-													<li><a href="index.html">Home Page 1</a></li>
-												</ul>
+											<li><a href="index.html">Home <!--<i class="icofont-rounded-down"></i> --></a>
+												<!--<ul class="dropdown">
+													<li><a href="index.html">Home Page 1</a></li> 
+												</ul> -->
 											</li>
 											<li><a href="#">Graduação</a></li>
 											<li><a href="#">Pós</a></li>
@@ -125,7 +125,7 @@
 													<li><a href="blog-single.html">Blog Details</a></li>
 												</ul> -->
 											</li>
-											<li><a href="contact.html">Contato</a></li>
+											<li class="active"><a href="contact.html">Contato</a></li>
 										</ul>
 									</nav>
 								</div>
@@ -180,39 +180,36 @@
 								<h2>Entre em contato</h2>
 								<p>Se tiver qualquer dúvida, não hesite em entrar em contato.</p>
 								<!-- Form -->
-								<form class="form" method="post" onsubmit="sendContactForm(event)">
+								<form class="form" onsubmit="sendContactForm(event)">
 									<div class="row">
 										<div class="col-lg-6">
 											<div class="form-group">
-												<input type="text" id="senderName" name="name" placeholder="Nome" required="true">
+												<input type="text" id="senderName" name="name" placeholder="Nome" required="true" style="text-transform: none">
 											</div>
 										</div>
 										<div class="col-lg-6">
 											<div class="form-group">
-												<input type="email" id="senderMail" name="email" placeholder="Email" required="true">
+												<input type="email" id="senderMail" name="email" placeholder="Email" required="true" style="text-transform: none">
 											</div>
 										</div>
 										<div class="col-lg-6">
 											<div class="form-group">
-												<input type="text" id="senderPhone"  name="phone" placeholder="Telefone" required="true">
+												<input type="text" id="senderPhone"  name="phone" placeholder="Telefone" required="true"style="text-transform: none">
 											</div>
 										</div>
 										<div class="col-lg-6">
 											<div class="form-group">
-												<input type="text" name="subject" id="subject" placeholder="Assunto" required="true">
+												<input type="text" name="subject" id="subject" placeholder="Assunto" required="true"style="text-transform: none">
 											</div>
 										</div>
 										<div class="col-lg-12">
 											<div class="form-group">
-												<textarea name="message" id="message" placeholder="Sua mensagem" required="true"></textarea>
+												<textarea name="message" id="message" placeholder="Sua mensagem" required="true"style="text-transform: none"></textarea>
 											</div>
 										</div>
 										<div class="col-12">
 											<div class="form-group login-btn">
 												<button class="btn" type="submit">Enviar</button>
-											</div>
-											<div class="checkbox">
-												<label class="checkbox-inline" for="2"><input name="news" id="2" type="checkbox">Gostaria de se inscrever na nossa Newsletter ?</label>
 											</div>
 										</div>
 									</div>
@@ -225,7 +222,7 @@
 				<div class="contact-info">
 					<div class="row">
 						<!-- single-info -->
-						<div class="col-lg-4 col-12 ">
+						<div class="col-lg-4 col-12 " onclick="testGetRequest()">
 							<div class="single-info">
 								<i class="icofont icofont-ui-call"></i>
 								<div class="content">
@@ -322,10 +319,10 @@
 										<h2>Newsletter</h2>
 										<p>Receba insights exclusivos e dicas imperdíveis em sua caixa de entrada.
 										</p>
-										<form action="mail/mail.php" method="get" target="_blank" class="newsletter-inner">
-											<input name="email" placeholder="Email Address" class="common-input" onfocus="this.placeholder = ''"
-												onblur="this.placeholder = 'Your email address'" required="" type="email">
-											<button class="button"><i class="icofont icofont-paper-plane"></i></button>
+										<form class="newsletter-inner" >
+											<input name="email" id="mailNewsletter" placeholder="Seu melhor email" class="common-input" onfocus="this.placeholder = ''"
+												onblur="this.placeholder = 'Seu melhor email'" required="true" type="email">
+											<button class="button" onclick="registerMailToNewsletter(event)"><i class="icofont icofont-paper-plane"></i></button>
 										</form>
 									</div>
 								</div>
@@ -339,7 +336,7 @@
 							<div class="row">
 								<div class="col-lg-12 col-md-12 col-12">
 									<div class="copyright-content">
-										<p>© Copyright 2024  |  All Rights Reserved by <a href="https://linkedin.com/in/keilertrindade" target="_blank">Keiler Trindade</a> </p>
+										<p>© Copyright 2024  |  All Rights Reserved by <a href="https://linkedin.com/in/keilertrindade" target="_blank">Keiler Trindade</a></p>
 									</div>
 								</div>
 							</div>
@@ -396,6 +393,6 @@
 		<!-- Main JS -->
 		<script src="js/main.js"></script>
 
-		<script src="js/api.js"></script>
+		<script type="module" src="js/api.js"></script>
     </body>
 </html>

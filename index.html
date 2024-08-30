@@ -109,10 +109,10 @@
 								<div class="main-menu">
 									<nav class="navigation">
 										<ul class="nav menu">
-											<li class="active"><a href="#">Home <i class="icofont-rounded-down"></i></a>
-												<ul class="dropdown">
+											<li class="active"><a href="#">Home  <!--<i class="icofont-rounded-down"></i> --></a>
+												<!--<ul class="dropdown">
 													<li><a href="index.html">Home Page 1</a></li>
-												</ul>
+												</ul> -->
 											</li>
 											<li><a href="#">Graduação</a></li>
 											<li><a href="#">Pós</a></li>
@@ -132,7 +132,7 @@
 							</div>
 							<div class="col-lg-2 col-12">
 								<div class="get-quote">
-									<a href="https://portalf.wpensar.com.br/login" class="btn">Já sou aluno</a>
+									<a href="https://portalf.wpensar.com.br/login" class="btn" style="text-transform: none">Já sou aluno</a>
 								</div>
 							</div>
 						</div>
@@ -156,7 +156,7 @@
 									<p>Escolha seu curso e entre no mercado de trabalho</p>
 									<div class="button">
 										<a href="#" class="btn">Ingresse</a>
-										<a href="#" class="btn primary">Já sou Aluno</a>
+										<a href="#" class="btn primary" style="text-transform: none">Já sou aluno</a>
 									</div>
 								</div>
 							</div>
@@ -174,7 +174,7 @@
 									<p>Explore cursos que abrem portas e impulsionam seu sucesso profissional.</p>
 									<div class="button">
 										<a href="#" class="btn">Ingresse</a>
-										<a href="#" class="btn primary">Já sou Aluno</a>
+										<a href="#" class="btn primary" style="text-transform: none">Já sou aluno</a>
 									</div>
 								</div>
 							</div>
@@ -189,10 +189,10 @@
 							<div class="col-lg-7">
 								<div class="text">
 									<h1><span>Aperfeiçoamento</span> que transforma <span>Habilidades</span> em <span>Sucesso!</span></h1>
-									<p>Descubra cursos que transformam conhecimento em resultados e impulsionam seu crescimento profissional.</p>
+									<!--<p>Descubra cursos que transformam conhecimento em resultados e impulsionam seu crescimento profissional.</p> -->
 									<div class="button">
 										<a href="#" class="btn">Ingresse</a>
-										<a href="#" class="btn primary">Já sou Aluno</a>
+										<a href="#" class="btn primary" style="text-transform: none">Já sou aluno</a>
 									</div>
 								</div>
 							</div>
@@ -364,7 +364,7 @@
 						<div class="single-fun">
 							<i class="icofont icofont-table"></i>
 							<div class="content">
-								<span class="counter">20</span>
+								<span class="counter">25</span>
 								<p>Anos de Experiência</p>
 							</div>
 						</div>
@@ -446,7 +446,7 @@
 							Fale conosco agora!<br>(71) 3444-6030</h2>
 							<p>Nossa equipe está pronta para ajudar você a dar o próximo passo na sua carreira. Ligue ou mande uma mensagem no WhatsApp e descubra como podemos transformar seu futuro!</p>
 							<div class="button">
-								<a href="#" class="btn">Nos Contate</a>
+								<a href="#" class="btn" style="text-transform: none">Contate-nos</a>
 								<a href="#" class="btn second">Saiba Mais<i class="fa fa-long-arrow-right"></i></a>
 							</div>
 						</div>
@@ -866,7 +866,7 @@
 					<div class="col-lg-6  col-12">
 						<!-- Start Newsletter Form -->
 						<div class="subscribe-text ">
-							<h6>Cadastre-se na nossa newsletter</h6>
+							<h6>Cadastre-se</h6>
 							<p class="">Receba insights exclusivos e dicas imperdíveis em sua caixa de entrada.</p>
 						</div>
 						<!-- End Newsletter Form -->
@@ -874,10 +874,10 @@
 					<div class="col-lg-6  col-12">
 						<!-- Start Newsletter Form -->
 						<div class="subscribe-form ">
-							<form action="mail/mail.php" method="get" target="_blank" class="newsletter-inner">
-								<input name="EMAIL" placeholder="Seu melhor endereço de email" class="common-input" onfocus="this.placeholder = ''"
+							<form class="newsletter-inner">
+								<input name="EMAIL" id="mailNewsletterBlock" placeholder="Seu melhor endereço de email" class="common-input" onfocus="this.placeholder = ''"
 									onblur="this.placeholder = 'Seu melhor endereço de email'" required="" type="email">
-								<button class="btn">Se Inscreva</button>
+								<button class="btn" style="text-transform: none" onclick="registerMailToNewsletterBlock(event)">Inscreva-se</button>
 							</form>
 						</div>
 						<!-- End Newsletter Form -->
@@ -945,10 +945,10 @@
 								<h2>Newsletter</h2>
 								<p>Receba insights exclusivos e dicas imperdíveis em sua caixa de entrada.
 								</p>
-								<form action="mail/mail.php" method="get" target="_blank" class="newsletter-inner">
-									<input name="email" placeholder="Email Address" class="common-input" onfocus="this.placeholder = ''"
-										onblur="this.placeholder = 'Your email address'" required="" type="email">
-									<button class="button"><i class="icofont icofont-paper-plane"></i></button>
+								<form class="newsletter-inner" >
+									<input name="email" id="mailNewsletter" placeholder="Seu melhor email" class="common-input" onfocus="this.placeholder = ''"
+										onblur="this.placeholder = 'Seu melhor email'" required="true" type="email">
+									<button class="button" onclick="registerMailToNewsletter(event)"><i class="icofont icofont-paper-plane"></i></button>
 								</form>
 							</div>
 						</div>
@@ -1012,5 +1012,7 @@
 		<script src="js/bootstrap.min.js"></script>
 		<!-- Main JS -->
 		<script src="js/main.js"></script>
+		<!-- API JS -->
+		<script type="module" src="js/api.js"></script>
     </body>
 </html>
