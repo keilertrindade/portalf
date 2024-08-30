@@ -975,7 +975,7 @@ body{
 .why-choose .choose-right{
 	height:100%;
 	width:100%;
-	background-image:url('img/video-bg.jpg');
+	background-image:url('img/quem-somos.jpg');
 	background-size:cover;
 	background-position:center;
 	background-repeat:no-repeat;
@@ -1035,7 +1035,7 @@ body{
 	Start Call to action CSS
 =================================*/
 .call-action{
-	background-image:url('img/call-bg.jpg');
+	background-image:url('img/fale-conosco.jpg');
 	background-size:cover;
 	background-position:center;
 	position:relative;
@@ -2338,7 +2338,7 @@ body{
 }
 /* Blockqoute */
 .news-single blockquote {
-	background-image: url('img/blockqoute-bg.jpg');
+	background-image: url('img/fale-conosco.jpg');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;

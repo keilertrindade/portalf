@@ -15,7 +15,7 @@ async function sendContactForm(event) {
     //alert();
     console.log(formData);
 
-    const endpoint = 'http://localhost:5220/fale-conosco';
+    const endpoint = 'http://portalf-webapi.runasp.net/fale-conosco';
 
     try {
         // Envia os dados para a API usando POST
@@ -38,7 +38,7 @@ async function sendContactForm(event) {
 function testGetRequest() {
     //event.preventDefault();
     // URL do seu endpoint
-    var url = "http://localhost:5220/fale-conosco/ObterTodos"; // Substitua pela URL correta
+    var url = "http://portalf-webapi.runasp.net/fale-conosco/ObterTodos"; // Substitua pela URL correta
 
     //Fazendo a requisição GET usando axios
     axios.get(url)
@@ -52,17 +52,14 @@ function testGetRequest() {
             alert("error");
             console.error("Erro na requisição:", error);
         });
-
-
 }
-
 
 async function registerMailToNewsletter(event){
     event.preventDefault();
 
     // Captura os dados do formulário
     
-    const endpoint = 'http://localhost:5220/newsletter';
+    const endpoint = 'http://portalf-webapi.runasp.net/newsletter';
 
     const formData = {
         Mail: document.getElementById('mailNewsletter').value
@@ -94,7 +91,7 @@ async function registerMailToNewsletterBlock(event){
 
     // Captura os dados do formulário
     
-    const endpoint = 'http://localhost:5220/newsletter';
+    const endpoint = 'http://portalf-webapi.runasp.net/newsletter';
 
     const formData = {
         Mail: document.getElementById('mailNewsletterBlock').value
@@ -119,8 +116,6 @@ async function registerMailToNewsletterBlock(event){
         alert('Ocorreu um erro ao enviar a mensagem.');
     }
 }
-
-
 
 
 window.testGetRequest = testGetRequest;
