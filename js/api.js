@@ -16,6 +16,8 @@ async function sendContactForm(event) {
     console.log(formData);
 
     const endpoint = 'http://portalf-webapi.runasp.net/fale-conosco/';
+    const spinner = document.getElementById('spinner-gif');
+    spinner.style.display = block;
 
     try {
         // Envia os dados para a API usando POST
@@ -32,6 +34,8 @@ async function sendContactForm(event) {
     } catch (error) {
         console.error('Erro:', error);
         alert('Ocorreu um erro ao enviar a mensagem.');
+    } finally{
+        spinner.style.display = none;
     }
 }
 
@@ -44,7 +48,7 @@ function testGetRequest() {
     axios.get(url)
         .then(function (response) {
             // Sucesso: exibe o objeto de resposta no console
-            alert("ok");
+            //alert("ok");
             console.log(response.data);
         })
         .catch(function (error) {
@@ -67,7 +71,7 @@ async function registerMailToNewsletter(event){
 
     
     console.log(formData);
-    alert();
+    //alert();
     try {
         // Envia os dados para a API usando POST
         const response = await axios.post(endpoint, formData, {
@@ -99,7 +103,7 @@ async function registerMailToNewsletterBlock(event){
 
     
     console.log(formData);
-    alert();
+    //alert();
     try {
         // Envia os dados para a API usando POST
         const response = await axios.post(endpoint, formData, {
