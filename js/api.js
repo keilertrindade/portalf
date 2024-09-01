@@ -17,7 +17,7 @@ async function sendContactForm(event) {
 
     const endpoint = 'http://portalf-webapi.runasp.net/fale-conosco/';
     const spinner = document.getElementById('spinner-gif');
-    spinner.style.display = block;
+    spinner.style.display = 'block';
 
     try {
         // Envia os dados para a API usando POST
@@ -35,7 +35,7 @@ async function sendContactForm(event) {
         console.error('Erro:', error);
         alert('Ocorreu um erro ao enviar a mensagem.');
     } finally{
-        spinner.style.display = none;
+        spinner.style.display = 'none';
     }
 }
 
